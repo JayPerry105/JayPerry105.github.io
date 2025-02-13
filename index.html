@@ -1,5 +1,31 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            /* Style for the collapsible container */
+            .collapsible {
+                max-height: 80px; /* Adjust for how much text to show initially */
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
+            }
+            .expanded {
+                max-height: none;
+            }
+            /* Style for the button */
+            .see-more-btn {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 8px 12px;
+                cursor: pointer;
+                margin-top: 5px;
+                border-radius: 5px;
+            }
+            .see-more-btn:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
 <body>
 <h1>Hello CS499!!</h1>
 <p>Jacob Perry is hosted with GitHub Pages.</p>
@@ -12,5 +38,59 @@
 <h2>Enhancement 1: Software Design and Engineering</h2>
 <h3>Porting my Text-Based Adventure Game from Python to C++</h3>
 <img src="images/enhancement1board.png" alt="Text-Based Adventure Gameplay">
+<h3>Enhancement 1 Narrative</h3>
+<div id="text-container" class="collapsible">
+    <p>
+        This artifact was a text-based adventure game that served as the final project for 
+        one of my first courses in my degree program here at SNHU, IT-140: Introduction to Scripting. 
+        It is a game where you are shown a map of the town you spawned into and must collect all 
+        available items before taking on the final monster in one of the areas on the map. If you 
+        collect all six items before reaching the monster you win, but if you do not collect them all, 
+        you are defeated. The game originally was written in Python, and the room and item pairs were 
+        stored in a dictionary.
+        I selected this artifact to demonstrate my ability to port a project from one language to 
+        another. Python to C++ in this case. This helps to show my proficiency in both languages. 
+        It also allowed me to demonstrate my knowledge of the various data structures in both languages
+         by knowing which C++ data structure made sense for this original Python project. 
+         The dynamically updating display of the current room highlights my ability to implement 
+         real-time updates to improve user experience. I improved this artifact by transitioning 
+         to a more efficient data structure for C++, a map in this case, and including a dynamic 
+         game map position which overall enhances the gameplay.
+        I did meet my planned course outcomes for this enhancement. I showed that I can design
+         and evaluate computing solutions by porting the game to a new language and choosing 
+         appropriate data structures. I used innovative techniques and tools by implementing 
+         dynamic updates to the game map position which displayed my software engineering skills.
+          I highlighted my ability to deliver professional communications with the game map which 
+          provides clear visual feedback to the user or player. I am on track with the expectations 
+          I laid out for the course outcomes I will meet in my initial submission.
+        Porting code from Python to C++ showed me how much I have learned from when I initially 
+        took the course, IT-140, where I originally created this artifact. I have gained a deep
+        understanding of both languages and their accompanying libraries. This project only 
+        helped solidify that in my mind. It did not take me exceptionally long to determine that
+         the map was the best C++ data structure for the job. It was the closest thing to Python’s 
+         dictionary that I could find. The update I provided to the real time player position showed
+          me just how useful dynamic updates can be, no matter how simple they are. I faced some
+           general debugging problems throughout this enhancement but worked step by step to debug
+            each time I encountered a new problem.
+    </p>
+</div>
+
+<!-- See More Button -->
+<button class="see-more-btn" onclick="toggleText()">See More</button>
+
+<script>
+    function toggleText() {
+        var content = document.getElementById("text-container");
+        var button = document.querySelector(".see-more-btn");
+
+        if (content.classList.contains("expanded")) {
+            content.classList.remove("expanded");
+            button.textContent = "See More";
+        } else {
+            content.classList.add("expanded");
+            button.textContent = "See Less";
+        }
+    }
+</script>
 </body>
 </html>
