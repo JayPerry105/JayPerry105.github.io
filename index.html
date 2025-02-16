@@ -33,8 +33,11 @@
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-                min-height: 100vh; /* Ensures full height */
+                min-height: auto; /* Ensures full height */
+                height: auto;
                 margin: 0; /* Removes default margin */
+                padding-bottom: 50px;
+                overflow-y: auto;
             }
         
             /* Set a max-width to limit text stretch */
@@ -63,7 +66,7 @@
 <h3>Porting my Text-Based Adventure Game from Python to C++</h3>
 <img src="images/enhancement1board.png" alt="Text-Based Adventure Gameplay">
 <h3>Enhancement 1 Narrative</h3>
-<div id="text-container" class="collapsible">
+<div id="text-container1" class="collapsible">
     <p style="max-width: 600px; line-height: 1.5;">
         This artifact was a text-based adventure game that served as the final project for 
         one of my first courses in my degree program here at SNHU, IT-140: Introduction to Scripting. 
@@ -100,11 +103,11 @@
 </div>
 
 <!-- See More Button -->
-<button class="see-more-btn" onclick="toggleText()">See More</button>
+<button class="see-more-btn" onclick="toggleText('text-container1, this')">See More</button>
 
 <script>
-    function toggleText() {
-        var content = document.getElementById("text-container");
+    function toggleText(containerId, button) {
+        var content = document.getElementById(containerId);
         var button = document.querySelector(".see-more-btn");
 
         if (content.classList.contains("expanded")) {
@@ -122,7 +125,7 @@
 <img src="images/enhancement2win.png" alt="Text-Based Adventure Win">
 <img src="images/enhancementTwoOOP.png" alt="Modularized code">
 <h3>Enhancement 2 Narrative</h3>
-<div id="text-container" class="collapsible">
+<div id="text-container2" class="collapsible">
     <p style="max-width: 600px; line-height: 1.5;">
         This is another enhancement of my text-based adventure game from my IT-140 class here at SNHU.
         In the first enhancement, I ported the project from Python to C++. In this second enhancement,
@@ -159,7 +162,7 @@
 </div>
 
 <!-- See More Button -->
-<button class="see-more-btn" onclick="toggleText()">See More</button>
+<button class="see-more-btn" onclick="toggleText('text-container2', this)">See More</button>
 
 <script>
     function toggleText() {
