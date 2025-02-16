@@ -158,5 +158,23 @@
     </p>
 </div>
 
+<!-- See More Button -->
+<button class="see-more-btn" onclick="toggleText()">See More</button>
+
+<script>
+    function toggleText() {
+        var content = document.getElementById("text-container");
+        var button = document.querySelector(".see-more-btn");
+
+        if (content.classList.contains("expanded")) {
+            content.classList.remove("expanded");
+            button.textContent = "See More";
+        } else {
+            content.classList.add("expanded");
+            button.textContent = "See Less";
+        }
+    }
+</script>
+
 </body>
 </html>
