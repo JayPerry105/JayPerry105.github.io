@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <style>
-            /* Style for the collapsible container */
+            body {
+                background-image: url('images/backgroundBlue.jpg');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin: 0;
+                padding-bottom: 50px;
+                overflow-y: auto;
+        }
+
+        </style>
+
+        <style>
             .collapsible {
-                max-height: 80px; /* Adjust for how much text to show initially */
+                max-height: 80px;
                 overflow: hidden;
                 transition: max-height 0.3s ease-in-out;
             }
             .expanded {
                 max-height: none;
             }
-            /* Style for the button */
+            
             .see-more-btn {
                 background-color: #007bff;
                 color: white;
@@ -26,29 +44,27 @@
             }
         </style>
         <style>
-            /* Center all content on the page */
+            
             body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-                min-height: auto; /* Ensures full height */
+                min-height: auto; 
                 height: auto;
-                margin: 0; /* Removes default margin */
+                margin: 0;
                 padding-bottom: 50px;
                 overflow-y: auto;
             }
         
-            /* Set a max-width to limit text stretch */
             .content {
-                max-width: 800px; /* Adjust based on preference */
+                max-width: 800px;
                 padding: 20px;
             }
         
-            /* Style images and iframes to prevent stretching */
             img, iframe {
-                max-width: 100%; /* Responsive sizing */
+                max-width: 100%;
                 height: auto;
             }
         </style>
@@ -102,7 +118,6 @@
     </p>
 </div>
 
-<!-- See More Button -->
 <button class="see-more-btn" onclick="toggleText('text-container1', this)">See More</button>
 
 <h2>Enhancement 2: Data Structures and Alghorithms</h2>
@@ -147,7 +162,6 @@
     </p>
 </div>
 
-<!-- See More Button -->
 <button class="see-more-btn" onclick="toggleText('text-container2', this)">See More</button>
 
 <h2>Enhancement 3: Databases</h2>
@@ -196,7 +210,6 @@
     </p>
 </div>
 
-<!-- See More Button -->
 <button class="see-more-btn" onclick="toggleText('text-container3', this)">See More</button>
 
 <script>
